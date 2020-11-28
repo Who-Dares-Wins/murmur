@@ -45,8 +45,6 @@ f_setup() {
         cp -p ${BASEDIR}/murmur.ini-default ${CONFIGDIR}/murmur.ini
     fi
 
-    sed -i '/database=/c\database='"${DATADIR}"'/murmur.sqlite' ${CONFIGDIR}/murmur.ini
-
     sed -i '/logfile=murmur.log/c\logfile='"${LOGDIR}"'/murmur.log' ${CONFIGDIR}/murmur.ini
 
     if [ -e ${CERTDIR}/privkey.pem ] && [ -e ${CERTDIR}/fullchain.pem ]; then
